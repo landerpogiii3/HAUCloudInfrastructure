@@ -25,6 +25,12 @@ resource "aws_instance" "unifiNetworkController" {
   //PEM key
   key_name = var.key_name
 
+  user_data = <<EOF
+  #!/bin/bash
+  sudo apt update
+  sudo apt upgrade -y
+  EOF
+
   tags = {
     Name = "UniFi Network Controller"
   }
