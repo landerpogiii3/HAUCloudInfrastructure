@@ -45,3 +45,15 @@ variable "enable_dns_hostnames" {
   type = bool
   default = true
 }
+
+variable "instance_type" {
+  description = "The EC2 instance type to be used."
+  type = string
+  default = "t3.large"
+}
+
+variable "key_name" {
+  description = "The name of the Key Pair to be used by instances"
+  type = string
+  default = "hauSingaporeKeyPair"
+}
