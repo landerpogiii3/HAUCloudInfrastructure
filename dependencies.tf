@@ -18,6 +18,28 @@ data "aws_ami" "ubuntu_server" {
   }
 }
 
+data "aws_ami" "ubuntu_server_UniFi_installed" {
+  most_recent = true
+  owners = [ "133353854791" ]
+
+  filter {
+    name = "name"
+    values = [ "UNC" ]
+  }
+
+  filter {
+    name = "architecture"
+    values = [ "x86_64" ]
+  }
+
+  filter {
+    name = "virtualization-type"
+    values = [ "hvm" ]
+  }
+}
+
+
+
 data "aws_ami" "windows_server" {
   most_recent = true
   owners = [ "amazon" ]
