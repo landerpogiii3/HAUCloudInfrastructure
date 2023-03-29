@@ -46,7 +46,7 @@ data "aws_ami" "windows_server" {
 
   filter {
     name = "name"
-    values = [ "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64*" ]
+    values = [ "Windows_Server-2022-English-Core-Base*" ]
   }
 
   filter {

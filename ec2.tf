@@ -2,7 +2,7 @@ resource "aws_instance" "unifiNetworkController" {
   depends_on = [
     module.key_pair
   ]
-  ami = data.aws_ami.ubuntu_server_UniFi_installed.id
+  ami = data.aws_ami.ubuntu_server.id
   instance_type = var.instance_type
   
   //Subnet
